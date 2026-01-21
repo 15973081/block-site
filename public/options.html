@@ -28,18 +28,22 @@
         <div class="options">
           <div id="enabled-option" class="option">
             <label>启用？</label>
-            <select id="enabled">
-              <option value="YES">是</option>
-              <option value="NO">否</option>
-            </select>
+            <div class="custom-select">
+              <select id="enabled">
+                <option value="YES">是</option>
+                <option value="NO">否</option>
+              </select>
+            </div>
           </div>
 
           <div id="context-menu-option" class="option">
             <label>上下文菜单？</label>
-            <select id="context-menu">
-              <option value="YES">是</option>
-              <option value="NO">否</option>
-            </select>
+            <div class="custom-select">
+              <select id="context-menu">
+                <option value="YES">是</option>
+                <option value="NO">否</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -64,28 +68,34 @@
         <div class="options">
           <div id="resolution-option" class="option">
             <label>如何处理被拦截的网站？</label>
-            <select id="resolution">
-              <option value="CLOSE_TAB">关闭标签页</option>
-              <option value="SHOW_BLOCKED_INFO_PAGE">显示拦截信息页面</option>
-            </select>
+            <div class="custom-select">
+              <select id="resolution">
+                <option value="CLOSE_TAB">关闭标签页</option>
+                <option value="SHOW_BLOCKED_INFO_PAGE">显示拦截信息页面</option>
+              </select>
+            </div>
 
             <fieldset id="blocked-info-page-details">
               <div class="option">
                 <label>显示拦截次数？</label>
-                <select id="counter-show">
-                  <option value="YES">是</option>
-                  <option value="NO">否</option>
-                </select>
+                <div class="custom-select">
+                  <select id="counter-show">
+                    <option value="YES">是</option>
+                    <option value="NO">否</option>
+                  </select>
+                </div>
               </div>
 
               <div id="counter-period-option" class="option">
                 <label>拦截次数统计周期？</label>
-                <select id="counter-period">
-                  <option value="ALL_TIME">全部时间</option>
-                  <option value="THIS_MONTH">本月</option>
-                  <option value="THIS_WEEK">本周</option>
-                  <option value="TODAY">今天</option>
-                </select>
+                <div class="custom-select">
+                  <select id="counter-period">
+                    <option value="ALL_TIME">全部时间</option>
+                    <option value="THIS_MONTH">本月</option>
+                    <option value="THIS_WEEK">本周</option>
+                    <option value="TODAY">今天</option>
+                  </select>
+                </div>
               </div>
             </fieldset>
           </div>
