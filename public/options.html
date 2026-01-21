@@ -1,81 +1,103 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>网站拦截</title>
-  <link rel="stylesheet" href="common.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站拦截 - 设置</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="options.css">
   <link rel="icon" type="image/png" href="icon_32.png">
   <script type="module" src="options.mjs"></script>
 </head>
-
 <body>
-  <h1>
-    <img src="icon_128.png">
-    <span>网站拦截</span>
-  </h1>
-
-  <div class="options">
-    <div id="enabled-option" class="option">
-      <label>启用？</label>
-      <select id="enabled">
-        <option value="YES">是</option>
-        <option value="NO">否</option>
-      </select>
-    </div>
-
-    <div id="context-menu-option" class="option">
-      <label>上下文菜单？</label>
-      <select id="context-menu">
-        <option value="YES">是</option>
-        <option value="NO">否</option>
-      </select>
-    </div>
-  </div>
-
-  <div id="blocked-container">
-    <div>要拦截的网站</div>
-    <textarea id="blocked-list" rows="10" cols="50" spellcheck="false"></textarea>
-  </div>
-
-  <div class="options">
-    <div id="resolution-option" class="option baseline">
-      <label>如何处理被拦截的网站？</label>
-      <div>
-        <select id="resolution">
-          <option value="CLOSE_TAB">关闭标签页</option>
-          <option value="SHOW_BLOCKED_INFO_PAGE">显示拦截信息页面</option>
-        </select>
-
-        <fieldset id="blocked-info-page-details">
-          <div class="option">
-            <label>显示拦截次数？</label>
-            <select id="counter-show">
+  <div class="options-container">
+    <h1 class="main-title">
+      <span class="material-icons icon-large">lock</span>
+      <span>网站拦截</span>
+    </h1>
+    
+    <h2 class="sub-title">专注模式设置</h2>
+    
+    <div class="glass-card">
+      <div class="section">
+        <div class="section-title">
+          <span class="material-icons">settings</span>
+          <h3>基本设置</h3>
+        </div>
+        
+        <div class="options">
+          <div id="enabled-option" class="option">
+            <label>启用？</label>
+            <select id="enabled">
               <option value="YES">是</option>
               <option value="NO">否</option>
             </select>
           </div>
 
-          <div id="counter-period-option" class="option">
-            <label>拦截次数统计周期？</label>
-            <select id="counter-period">
-              <option value="ALL_TIME">全部时间</option>
-              <option value="THIS_MONTH">本月</option>
-              <option value="THIS_WEEK">本周</option>
-              <option value="TODAY">今天</option>
+          <div id="context-menu-option" class="option">
+            <label>上下文菜单？</label>
+            <select id="context-menu">
+              <option value="YES">是</option>
+              <option value="NO">否</option>
             </select>
           </div>
-        </fieldset>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="section-title">
+          <span class="material-icons">block</span>
+          <h3>拦截列表</h3>
+        </div>
+        
+        <div id="blocked-container">
+          <textarea id="blocked-list" placeholder="输入要拦截的网站，每行一个"></textarea>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="section-title">
+          <span class="material-icons">tune</span>
+          <h3>拦截设置</h3>
+        </div>
+        
+        <div class="options">
+          <div id="resolution-option" class="option">
+            <label>如何处理被拦截的网站？</label>
+            <select id="resolution">
+              <option value="CLOSE_TAB">关闭标签页</option>
+              <option value="SHOW_BLOCKED_INFO_PAGE">显示拦截信息页面</option>
+            </select>
+
+            <fieldset id="blocked-info-page-details">
+              <div class="option">
+                <label>显示拦截次数？</label>
+                <select id="counter-show">
+                  <option value="YES">是</option>
+                  <option value="NO">否</option>
+                </select>
+              </div>
+
+              <div id="counter-period-option" class="option">
+                <label>拦截次数统计周期？</label>
+                <select id="counter-period">
+                  <option value="ALL_TIME">全部时间</option>
+                  <option value="THIS_MONTH">本月</option>
+                  <option value="THIS_WEEK">本周</option>
+                  <option value="TODAY">今天</option>
+                </select>
+              </div>
+            </fieldset>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <div class="credits">
+      <p>由 <a target="_blank" href="https://github.com/penge">Pavel Bucka</a> 创建</p>
+      <p>汉化者：<a target="_blank" href="https://github.com/15973081/">15973081</a></p>
+      <p>在 <a target="_blank" href="https://github.com/penge/block-site">GitHub</a> 上给网站拦截插件点个 <span class="star">★</span> 支持一下</p>
+    </div>
   </div>
-
-  <p id="credits">
-    由 <a target="_blank" href="https://github.com/penge">Pavel Bucka</a> 创建<br>
-    汉化者：<a target="_blank" href="https://github.com/15973081/">15973081</a><br>
-    在 <a target="_blank" href="https://github.com/penge/block-site">GitHub</a> 上给网站拦截插件点个 <span id="star">★</span> 支持一下
-  </p>
 </body>
-
 </html>
