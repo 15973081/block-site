@@ -334,7 +334,7 @@
             深呼吸，回归任务，你正在变得更强大。
         </p>
         
-        <button class="back-button" onclick="window.history.back()">返回上一页</button>
+        <button class="back-button">关闭标签页</button>
         <a href="options.html" class="options-link">查看选项</a>
         
         <div class="bottom-info">
@@ -345,14 +345,6 @@
         </div>
     </div>
 
-    <script>
-        // 按钮点击动画
-        document.querySelector('.back-button').addEventListener('click', function() {
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-        });
-    </script>
+    <script src="blocked.js"></script>
 </body>
 </html>
